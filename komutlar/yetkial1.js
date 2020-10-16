@@ -6,23 +6,26 @@ exports.run = (client, message, args) => {
     let member = message.mentions.users.first() || client.users.get(args.join(' '))
       if(!member) return message.channel.send(new Discord.RichEmbed().setColor('RANDOM').addField("Hatalı Kullanım",`Lütfen Bir Kullanıcı Etiketleyiniz`).setFooter(message.author.username, message.author.avatarURL)).then(m => m.delete(10000));
     const kullanıcı = message.guild.member(member)
-    kullanıcı.addRole("756247568119234711")//Change
+    kullanıcı.addRole("764063639664590871")//Change
+    kullanıcı.addRole("766773664322027530")//Change
+    kullanıcı.addRole("766772930586607627")//Change
+    kullanıcı.addRole("766366072051335218")//Change
     const embed = new Discord.RichEmbed()
-    .setTitle("PHENTOS YÖNETİM | ROL VERME")
+    .setTitle("Volantis yönetim | ROL VERME")
     .setColor("RANDOM")
     .addField("Yetki Verildi", `<@!${kullanıcı.user.id}> Adlı Kullanıcıya Yetki Verildi`)
-    .setFooter('Phentos / Yönetim Botu')
+    .setFooter('Volantis / Rol Verme Botu')
     message.channel.send(embed)
   }
 }
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: ["changever"],
+  aliases: ["yetkial1"],
   permLevel: 0
 };
 exports.help = {
-  name: "changever",
+  name: "yetkial1",
   description: "Kullanıcıyı Yetki Verir",
-  usage: "changever"
+  usage: "yetkial1"
 };
