@@ -6,23 +6,23 @@ exports.run = (client, message, args) => {
     let member = message.mentions.users.first() || client.users.get(args.join(' '))
       if(!member) return message.channel.send(new Discord.RichEmbed().setColor('RANDOM').addField("Hatalı Kullanım",`Lütfen Bir Kullanıcı Etiketleyiniz`).setFooter(message.author.username, message.author.avatarURL)).then(m => m.delete(10000));
     const kullanıcı = message.guild.member(member)
-    kullanıcı.addRole("756247565434880092")//Move
+    kullanıcı.addRole("766779671656267776")//Change
     const embed = new Discord.RichEmbed()
-    .setTitle("PHENTOS YÖNETİM | ROL VERME")
+    .setTitle("Volantis yönetim | ROL VERME")
     .setColor("RANDOM")
     .addField("Yetki Verildi", `<@!${kullanıcı.user.id}> Adlı Kullanıcıya Yetki Verildi`)
-    .setFooter('Phentos / Yönetim Botu')
+    .setFooter('Volantis / Rol Verme Botu')
     message.channel.send(embed)
   }
 }
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: ["movever"],
+  aliases: ["kemalist"],
   permLevel: 0
 };
 exports.help = {
-  name: "movever",
+  name: "kemalist",
   description: "Kullanıcıyı Yetki Verir",
-  usage: "movever"
+  usage: "kemalist"
 };
