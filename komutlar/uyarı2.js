@@ -10,7 +10,7 @@ exports.run = (client, message, args) => {
     const embed = new Discord.RichEmbed()
     .setTitle("Volantis yönetim | ROL VERME")
     .setColor("RANDOM")
-    .addField("Yetki Verildi", `<@!${kullanıcı.user.id}> Adlı Kullanıcıya Yetki Verildi`)
+    .addField("Uyarı Verildi", `<@!${kullanıcı.user.id}> Adlı Kullanıcıya Uyarı Verildi`)
     .setFooter('Volantis / Rol Verme Botu')
     message.channel.send(embed)
   }
